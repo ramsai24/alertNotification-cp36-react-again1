@@ -1,0 +1,19 @@
+/* Write your CSS here */
+.notification-item {
+  display: flex;
+  justify-content: space-between;
+  align-item: flex-start;
+  min-width: 80%;
+  border: 1px solid orange;
+}
+
+.heading-description-container {
+  margin-left: 0px;
+  align-self: flex-start;
+  padding-top: 0px;
+  border: 1px solid green;
+}
+
+.close-icon {
+  align-self: center;
+}
