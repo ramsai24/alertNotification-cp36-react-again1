@@ -28,51 +28,55 @@ const notificationsList = [
 ]
 
 const renderListItem = each => {
-  console.log(each)
+  //   console.log(each)
   switch (each.heading) {
     case 'Success':
       return (
-        <li key={each.heading} className="notification-item">
-          <div className="heading-description-container">
-            <Notification>
-              {each}
-              <AiFillCheckCircle />
-            </Notification>
-          </div>
-        </li>
+        <Notification key={each.heading} className="notification-item">
+          <>
+            <AiFillCheckCircle />
+            <div className="heading-description-container">
+              <h1 className="heading">{each.heading}</h1>
+              <p className="description">{each.description}</p>
+            </div>
+          </>
+        </Notification>
       )
     case 'Error':
       return (
-        <li key={each.heading} className="notification-item">
-          <div className="heading-description-container">
-            <Notification>
-              {each}
-              <RiErrorWarningFill />
-            </Notification>
-          </div>
-        </li>
+        <Notification key={each.heading} className="notification-item">
+          <>
+            <RiErrorWarningFill />
+            <div className="heading-description-container">
+              <h1 className="heading">{each.heading}</h1>
+              <p className="description">{each.description}</p>
+            </div>
+          </>
+        </Notification>
       )
     case 'Warning':
       return (
-        <li key={each.heading} className="notification-item">
-          <div className="heading-description-container">
-            <Notification>
-              {each}
-              <MdWarning />
-            </Notification>
-          </div>
-        </li>
+        <Notification key={each.heading} className="notification-item">
+          <>
+            <MdWarning />
+            <div className="heading-description-container">
+              <h1 className="heading">{each.heading}</h1>
+              <p className="description">{each.description}</p>
+            </div>
+          </>
+        </Notification>
       )
     case 'Info':
       return (
-        <li className="notification-item" key={each.heading}>
-          <div className="heading-description-container">
-            <Notification>
-              {each}
-              <MdInfo />
-            </Notification>
-          </div>
-        </li>
+        <Notification key={each.heading} className="notification-item">
+          <>
+            <MdInfo />
+            <div className="heading-description-container">
+              <h1 className="heading">{each.heading}</h1>
+              <p className="description">{each.description}</p>
+            </div>
+          </>
+        </Notification>
       )
     default:
       return null
